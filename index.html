@@ -1,210 +1,81 @@
 <!DOCTYPE html>
-<html>
-<title>jonefang的個人簡介</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 以下是引入的做前端时普遍会用到的library格式 -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Roboto", sans-serif
-    }
-</style>
-
-<body class="w3-light-grey">
-
-    <!-- 设置顶部banner背景图片，可以在Ava的git上marster分支ProjectPhotos文件夹里选择自己喜欢的背景图片（具体操作：右键点击图片->复制图片地址->把URL添加到代码里） -->
-    <!-- 图片文件夹地址：https://github.com/AvaWu-AU/git_cv_project/tree/master/ProjectPhotos -->
-    <div class="text-center" style="margin-bottom:0;background-image: url('https://github.com/AvaWu-AU/git_cv_project/blob/master/ProjectPhotos/topBanner2.jpg?raw=true'); background-repeat: no-repeat;
-     background-size: cover;color:#ffffff;padding-top:5rem;padding-bottom : 30rem;background-attachment: fixed;">
-        <h1>我的主頁</h1>
-        <p>程序源的進化歷程</p>
-    </div>
-    <!-- 顶部导航栏 -->
-    <div style="background-color: #343a40;display:flex;flex-direction: row;justify-content: center;">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">簡介内容</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">技能</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">語言</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">工作經歷</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">學歷</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- 頁面内容框 -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-        <!-- 頁面大小，会根据不同的浏览器自动调整大小，最大宽度1400px-->
-        <div class="container-sm" style="max-width:1400px;">
-            <!-- The Grid -->
-            <div class="row">
-                <!-- 左边栏目 -->
-                <div class="col-sm-4">
-                    <div class="w3-white w3-text-grey w3-card-4">
-                        <div class="w3-display-container">
-                            <!-- 以下在src的双引号内输入你喜欢的照片路径 -->
-                            <div class="col" style="text-align: right;"><img
-                                    src="https://github.com/AvaWu-AU/git_cv_project/blob/master/ProjectPhotos/%E4%B8%AA%E4%BA%BA%E5%A4%B4%E5%83%8F-HelloWorld%E7%B4%AB%E8%89%B2%E5%B0%8F%E7%BE%8A.png?raw=true"
-                                    style="width:60%;text-align: right;padding:10px 10px;margin:10px 10px;"
-                                    alt="Avatar"></div>
-                            <div class="w3-display-bottomleft w3-container w3-text-black">
-                                <h2>jonefang</h2>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software
-                                Developer
-                            </p>
-                            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>台灣 高雄</p>
-                            <p><i
-                                    class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>kuochungfang@gmail.com
-                            </p>
-                            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>07-8211826</p>
-                            <hr>
-
-                            <p class="w3-large"><b><i
-                                        class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>IT技能</b>
-                            </p>
-                            <p style="font-size:1.3rem;"><span class="badge badge-info">Java</span>
-                                <span class="badge badge-info">Delphi</span>
-                                <span class="badge badge-info">JavaScript</span>
-                                <span class="badge badge-info">nodejs</span>
-                                <span class="badge badge-info">Vb</span>
-                                <span class="badge badge-info">HTML</span>
-                                <span class="badge badge-info">CSS</span>
-                                <span class="badge badge-info">8051</span>
-                                <span class="badge badge-info">Pic</span>
-                                <span class="badge badge-info">Python</span>
-                                <span class="badge badge-info">Git</span>
-                            </p>
-                            <br>
-                            <p class="w3-large"><b><Arduino使用技能</b>
-                            </p>
-                            <p style="font-size:1.3rem;">
-                                <span class="badge badge-success">Sketch</span>
-                                <span class="badge badge-success">Photoshop</span>
-                                <span class="badge badge-success">Adobe Illustrator</span>
-                                <br>
-
-                            <p class="w3-large w3-text-theme"><b><i
-                                        class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>語言</b></p>
-                            <p>台語</p>
-                            <div class="w3-light-grey w3-round-xlarge">
-                                <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-                            </div>
-                            <p>國語</p>
-                            <div class="w3-light-grey w3-round-xlarge">
-                                <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
-                            </div>
-                            <p>英語</p>
-                            <div class="w3-light-grey w3-round-xlarge">
-                                <div class="w3-round-xlarge w3-teal" style="height:24px;width:70%"></div>
-                            </div>
-                            <br>
-                        </div>
-                    </div><br>
-                    <!-- 左边栏结束 -->
-                </div>
-
-                <!-- 右边栏内容 -->
-                <div class="col-sm-8">
-
-                    <div class="w3-container w3-card w3-white w3-margin-bottom">
-                        <h2 class="w3-text-grey w3-padding-16"><i
-                                class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>工作经历</h2>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>程式開發 / Taiwan Kaohsiung 台灣 高雄</b></h5>
-                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018年7月 - <span
-                                    class="w3-tag w3-teal w3-round">至今</span></h6>
-                            <p>使用Delphi, JavaScript, nodejs, Phython, HTML, CSS, Arduino, 8051, pic單晶片..
-                                </p>
-                            <hr>
-                        </div>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>產品開發 / 設計
-                            </b></h5>
-                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016年7月 -
-                                2019年10月
-                            </h6>
-                            <p>Facebook,YouTube制作</p>
-                            <hr>
-                        </div>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>This is a design website</b></h5>
-                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011年11月 -
-                                2014年12月
-                            </h6>
-                            <p>制作
-                            </p>
-                            <br>
-                        </div>
-                    </div>
-
-                    <div class="w3-container w3-card w3-white w3-margin-bottom">
-                        <h2 class="w3-text-grey w3-padding-16"><i
-                                class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>教育經歷</h2>
-                        <div class="w3-container">
-                            <h5 class="w3-opacity"><b>台灣正修科技大學</b></h5>
-                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>白1965年7月 -
-                                1970年7月
-                            </h6>
-                            <p>Information Technology機械工程科</p>
-                            <hr>
-                        </div>
-
-                    </div>
-
-                    <!-- 右边栏内容结束 -->
-                </div>
-
-                <!-- End Grid -->
-            </div>
-
-            <!-- 页面内容结束 -->
-        </div>
-
-        <!-- 页脚代码 -->
-        <footer class="w3-container w3-teal w3-center w3-margin-top" style="font-size:1.2rem;color:#ffffff;">
-            <p>歡迎關注我的帳號</p>
-            <i class="fa fa-youtube w3-hover-opacity"></i><a href="https://www.youtube.com/channel/" target="_blank"
-                style="color:#ffffff;">YouTube-jonefang</a>
-            <i class="fa fa-instagram w3-hover-opacity"></i><a
-                href="https://space.bilibili.com/570279925?spm_id_from=333.788.b_765f7570696e666f.2" target="_blank"
-                style="color:#ffffff;margin-left:20px;margin-bottom:10px;">jonefang programer website</a>
-            <!-- 页脚代码结束 -->
-        </footer>
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="..." />
+    <title>jonefang的個人簡介</title>
+  </head>
+  <body>
+    <a href="company/about.html">About Me</a>
+    <a href="#section-css">CSS</a>
+    <a href="img/fang.jpg">My Photo</a>
+    <a link rel="stylesheet" href="https://google.com">google</a>
+    <a href="Emailto:kuochungfang@gmail.com">Email Me</a>
+    <img src="img/coffee.jpg" alt="A coffee" />
+    <style>
+      img {
+        width: 100px;
+        border-radius: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+  
+      .username {
+        font-weight: bold;
+      }
+    </style>
+  
+    <h2>HTML</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+      nostrum explicabo ea, optio odit id ratione autem dolor quam itaque
+      dignissimos magni totam? Cum saepe totam aliquid optio, repudiandae nobis
+      quos soluta, nisi tenetur laborum in, tempore sequi commodi deserunt
+      adipisci! Voluptatum nisi sed hic ut corporis mollitia laudantium. Harum
+      quae porro, totam error dolor inventore sequi? Maxime reiciendis a quae ad
+      illo laboriosam ipsum vero repudiandae saepe dolores, voluptate pariatur
+      eligendi eveniet blanditiis, dolor voluptas. Est illo vitae, nemo
+      voluptate explicabo maiores labore, aperiam minus, exercitationem error
+      sapiente commodi ipsam? Accusamus beatae nemo, veniam, amet sapiente
+      molestias ex laboriosam illum eveniet cum harum quo optio, porro
+      voluptatum quibusdam molestiae pariatur debitis tempora! Numquam provident
+      dignissimos vitae eum dicta accusamus amet cum nihil illo asperiores
+      architecto labore nemo, ducimus voluptatum rem fugit! Cupiditate, illum
+      debitis! Ad nihil illum laudantium qui maiores rerum laboriosam doloribus
+      voluptatum inventore placeat in, accusamus vero recusandae quidem magnam.
+      Eveniet suscipit perspiciatis tempore incidunt voluptatum. Tenetur
+      assumenda deserunt quaerat architecto aliquam iste optio id placeat.
+      Corrupti dolore fuga dignissimos mollitia accusantium, quasi voluptates,
+      ea saepe maiores facere ab! Eius modi, quasi eum aperiam nisi blanditiis
+      asperiores quam natus commodi deserunt autem ratione nesciunt explicabo
+      totam provident.
+    </p>
+    <h2 id="section-css">CSS</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque sint
+      nesciunt culpa tempore tempora suscipit alias laborum tenetur itaque?
+      Obcaecati adipisci deserunt eveniet aspernatur doloremque corporis
+      tempore, amet natus voluptate reprehenderit velit ipsam porro veniam vel
+      sapiente dicta consectetur eum delectus, sit totam, ea perspiciatis nam
+      maxime! Impedit alias perferendis porro commodi fugit tempore nulla
+      laudantium ipsam! Aut veniam laborum dignissimos? Dolore, blanditiis
+      itaque, unde repudiandae distinctio voluptatum facere, inventore totam
+      exercitationem sapiente dignissimos dicta similique modi sint. Repellat,
+      autem neque quos libero alias saepe in ducimus perspiciatis ab dolorum,
+      exercitationem, ad ea magnam nam est maiores porro harum? Sint quae
+      aspernatur voluptatibus. Quaerat repellat tempore a inventore illo nostrum
+      sit non vero, natus accusamus illum maxime ducimus accusantium animi
+      molestiae blanditiis debitis vel numquam aperiam pariatur voluptatem sunt.
+      Cupiditate soluta rerum ullam magnam consequuntur dolorem minus! Quia quod
+      voluptate doloremque. Minima optio tempore animi est eveniet quidem
+      temporibus esse ea aut atque repellendus ut velit odio saepe facere sit,
+      reiciendis a officia iusto hic, iste magnam libero. Maiores cum dolores
+      dolor incidunt molestiae dolorem quia animi temporibus deleniti quos, hic
+      assumenda eius aspernatur quidem ducimus veniam doloribus at. Dolor quos,
+      ex illum dignissimos neque aliquam illo explicabo eveniet?
+    </p>
+    <a href="#">Jump to Top</a>
+  </body>
 </html>
