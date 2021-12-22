@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="HTML, CSS" />
-    <meta name="description" content="..." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 />"
-    <title>jonefang的個人簡介</title>
+    <title>在HTML中引用JavaScript jone的變數</title>
+    <script type="text/javascript">
+      var foobar = "foobar"; //建立一個全域性變數“foobar”
+      function var2pass() {
+        document.getElementById("textfield").value = foobar; //給HTML元素的value屬性賦值
+
+        alert("應用變數成功！");
+      }
+      function displayVar() {
+        alert("變數值為" + foobar);
+      }
+    </script>
   </head>
   <body>
-    <a href="company/about.html">About Me</a>
-    <a href="#section-css">CSS</a>
-    <a href="fang.jpg">My Photo</a>
-    <a link rel="stylesheet" href="https://google.com">google</a>
-    <a href="Emailto:kuochungfang@gmail.com">Email Me</a>
+    <h1>方國忠的主網頁</h1>
+    <hr />
+    <ul>
+      電子時鐘網路esp8266
+      <i4>ESP32</i4>
+      <i4>LCD1602</i4>
+      <i4>OLED</i4>
+    </ul>
+    <i4>12345</i4>
+    <i4>12345</i4>
+    <i4>12345</i4>
     <img src="coffee.jpg" alt="A coffee" />
     <style>
       img {
@@ -22,62 +34,93 @@
         float: left;
         margin-right: 10px;
       }
-  
+
       .username {
         font-weight: bold;
       }
     </style>
-      <hr/>
-    <h2>HTML</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
-      nostrum explicabo ea, optio odit id ratione autem dolor quam itaque
-      dignissimos magni totam? Cum saepe totam aliquid optio, repudiandae nobis
-      quos soluta, nisi tenetur laborum in, tempore sequi commodi deserunt
-      adipisci! Voluptatum nisi sed hic ut corporis mollitia laudantium. Harum
-      quae porro, totam error dolor inventore sequi? Maxime reiciendis a quae ad
-      illo laboriosam ipsum vero repudiandae saepe dolores, voluptate pariatur
-      eligendi eveniet blanditiis, dolor voluptas. Est illo vitae, nemo
-      voluptate explicabo maiores labore, aperiam minus, exercitationem error
-      sapiente commodi ipsam? Accusamus beatae nemo, veniam, amet sapiente
-      molestias ex laboriosam illum eveniet cum harum quo optio, porro
-      voluptatum quibusdam molestiae pariatur debitis tempora! Numquam provident
-      dignissimos vitae eum dicta accusamus amet cum nihil illo asperiores
-      architecto labore nemo, ducimus voluptatum rem fugit! Cupiditate, illum
-      debitis! Ad nihil illum laudantium qui maiores rerum laboriosam doloribus
-      voluptatum inventore placeat in, accusamus vero recusandae quidem magnam.
-      Eveniet suscipit perspiciatis tempore incidunt voluptatum. Tenetur
-      assumenda deserunt quaerat architecto aliquam iste optio id placeat.
-      Corrupti dolore fuga dignissimos mollitia accusantium, quasi voluptates,
-      ea saepe maiores facere ab! Eius modi, quasi eum aperiam nisi blanditiis
-      asperiores quam natus commodi deserunt autem ratione nesciunt explicabo
-      totam provident.
-    </p>
-    <hr/>
-    <h2 id="section-css">CSS</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque sint
-      nesciunt culpa tempore tempora suscipit alias laborum tenetur itaque?
-      Obcaecati adipisci deserunt eveniet aspernatur doloremque corporis
-      tempore, amet natus voluptate reprehenderit velit ipsam porro veniam vel
-      sapiente dicta consectetur eum delectus, sit totam, ea perspiciatis nam
-      maxime! Impedit alias perferendis porro commodi fugit tempore nulla
-      laudantium ipsam! Aut veniam laborum dignissimos? Dolore, blanditiis
-      itaque, unde repudiandae distinctio voluptatum facere, inventore totam
-      exercitationem sapiente dignissimos dicta similique modi sint. Repellat,
-      autem neque quos libero alias saepe in ducimus perspiciatis ab dolorum,
-      exercitationem, ad ea magnam nam est maiores porro harum? Sint quae
-      aspernatur voluptatibus. Quaerat repellat tempore a inventore illo nostrum
-      sit non vero, natus accusamus illum maxime ducimus accusantium animi
-      molestiae blanditiis debitis vel numquam aperiam pariatur voluptatem sunt.
-      Cupiditate soluta rerum ullam magnam consequuntur dolorem minus! Quia quod
-      voluptate doloremque. Minima optio tempore animi est eveniet quidem
-      temporibus esse ea aut atque repellendus ut velit odio saepe facere sit,
-      reiciendis a officia iusto hic, iste magnam libero. Maiores cum dolores
-      dolor incidunt molestiae dolorem quia animi temporibus deleniti quos, hic
-      assumenda eius aspernatur quidem ducimus veniam doloribus at. Dolor quos,
-      ex illum dignissimos neque aliquam illo explicabo eveniet?
-    </p>
-    <a href="#">Jump to Top</a>
+    <ul>
+      WEB CAMERA
+    </ul>
+    <ul>
+      IOT
+    </ul>
+    <a link rel="stylesheet" href="http://esp32cam.ddns.net">WEB control</a>
+
+    <hr />
+    <br />
+    <h5>電子時鐘網路校時_可自行修改SSID和PASSWORD(2021/11/01完成)</h5>
+    <form name="form1" method="post" action="">
+      <label>
+        <input type="text" name="textfield" id="textfield" />
+      </label>
+      <!-- 繫結onclick事件 -->
+      <label>
+        <input
+          type="button"
+          name="button"
+          id="button"
+          value="顯示變數"
+          onclick="javascript: void displayVar();"
+        />
+      </label>
+      <!-- 繫結onclick事件 -->
+      <label>
+        <input
+          type="button"
+          name="button2"
+          id="button2"
+          value="引用變數"
+          onclick="javascript: void var2pass();"
+        />
+      </label>
+    </form>
   </body>
 </html>
+<style>
+  #T1 {
+    border-right: 15px solid white;
+    border-left: 15px solid white;
+    border-bottom: 25px solid rgb(0, 255, 98);
+    display: inline-block;
+  }
+  #T2 {
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    border-left: 25px solid rgb(255, 0, 21);
+    display: inline-block;
+  }
+  #T3 {
+    border-right: 15px solid rgb(255, 253, 253);
+    border-left: 15px solid white;
+    border-top: 25px solid rgb(145, 255, 0);
+    display: inline-block;
+  }
+  #T4 {
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    border-right: 25px solid blue;
+    display: inline-block;
+  }
+</style>
+<div id="T2">test2</div>
+<div id="T1">test1</div>
+
+<div id="T3">test3</div>
+<div id="T4">test4</div>
+<style type="text/css">
+  #BorderBox{
+    border-top:5px black solid;
+    border-right:8px red double;
+    border-left:7px yellow dotted;
+    border-bottom:3px blue dashed;
+    padding: 43px;0px;
+  }
+</style>
+<div id="BorderBox">四個不同的邊框設計</div>
+<div
+  style="border-color:#aaaaee;border-style:solid;border-width:3px;padding: 155px;5px;"
+>
+  This is atest bargin <test id="t1"></test>
+</div>
+/** this is a note */
