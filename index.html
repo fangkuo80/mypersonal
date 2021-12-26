@@ -1,95 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>在HTML中引用JavaScript jone的變數</title>
-    <script type="text/javascript">
-      var foobar = "foobar"; //建立一個全域性變數“foobar”
-      function var2pass() {
-        document.getElementById("textfield").value = foobar; //給HTML元素的value屬性賦值
-
-        alert("應用變數成功！");
-      }
-      function displayVar() {
-        alert("變數值為" + foobar);
-      }
-    </script>
-  </head>
-  <body>
-    <h1>方國忠的主網頁</h1>
-    <hr />
-    <!div style="border: 2px orange solid">
-      <!iframe src="http://esp32cam.ddns.net" width="360" height="360"></!iframe>
-    </!div>
-
-    <ul>
-      電子時鐘網路,可自行修改SSID和PASSWORD
-    </ul>
-      <il>ESP32</il>
-      <il>LCD1602 <img src="lcd12f.jpg" alt="lcd" /></il>
-      <il>OLED</il>
-   
-    <ul>
-      <ol>nodemcu 8266</ol>
-      <ol>MG995</ol>
-      <ol>esp01</ol>
-    </ul>
+    <body>
+      <h1>方國忠的主網頁</h1>
+      <hr />
+      <!div style="border: 2px orange solid">
+        <!iframe src="http://esp32cam.ddns.net" width="360" height="360"></!iframe>
+      </!div>
+  
+      <ul>
+        電子時鐘網路,可自行修改SSID和PASSWORD
+      </ul>
+      <ul> 
+      <img src="lcd12f.jpg" alt="lcd" /></ol>
+      
+        <ol>ESP32</ol>
+        <ol>OLED</ol>
+        <ol>LCD1602</ol>
+        <ol>tm1637</ol>
+        <ol>LCD4004</ol>
+       </ul>   
+      <ul>
+      <img src="../img/lcd12f.jpg" alt="lcd" /></ol>
+        <ol>nodemcu 8266</ol>
+        <ol>MG995</ol>
+        <ol>esp01</ol>
+        <ol>UNO</ol>
+        <ol>nano</ol>
+      </ul>
+      
+      <img src="/img/coffee.jpg" alt="A coffee" />
+      <style>
+        img {
+          width: 100px;
+          border-radius: 50px;
+          float: left;
+          margin-right: 10px;
+        }
+  
+        .username {
+          font-weight: bold;
+        }
+      </style>
+      <ul>
+        <ol>WEB CAMERA</ol>
+        <ol>IOT</ol>
+        <ol>Line Token</ol>
+        <ol>Server Control</ol>
+        <ol>MQTT</ol>
+        <ol>MQTT</ol>
+        <ol>MQTT</ol>
+        <ol>MQTT</ol>
+      </ul>
+      <a link rel="stylesheet" href="http://esp32cam.ddns.net">WEB control</a>
+  
+      <hr />
+      <br />
+      <h5>電子時鐘網路校時_可自行修改SSID和PASSWORD(2021/11/01完成)</h5>
+    </body>
+    <div id="T2">test2</div>
+    <div id="T1">test1</div>
     
-    <img src="coffee.jpg" alt="A coffee" />
-    <style>
-      img {
-        width: 100px;
-        border-radius: 50px;
-        float: left;
-        margin-right: 10px;
-      }
-
-      .username {
-        font-weight: bold;
-      }
-    </style>
-    <ul>
-      WEB CAMERA
-    </ul>
-    <ul>
-      IOT
-    </ul>
-    <a link rel="stylesheet" href="http://esp32cam.ddns.net">WEB control</a>
-
-    <hr />
-    <br />
-    <h5>電子時鐘網路校時_可自行修改SSID和PASSWORD(2021/11/01完成)</h5>
-    <form name="form1" method="post" action="">
-      <label>
-        <input type="text" name="textfield" id="textfield" />
-      </label>
-      <!-- 繫結onclick事件 -->
-      <label>
-        <input
-          type="button"
-          name="button"
-          id="button"
-          value="顯示變數"
-          onclick="javascript: void displayVar();"
-        />
-      </label>
-      <!-- 繫結onclick事件 -->
-      <label>
-        <input
-          type="button"
-          name="button2"
-          id="button2"
-          value="引用變數"
-          onclick="javascript: void var2pass();"
-        />
-      </label>
-    </form>
-  </body>
+    <div id="T3">test3</div>
+    <div id="T4">test4</div>
+    <div id="BorderBox">四個不同的邊框設計</div>
+<div
+  style="border-color:#aaaaee;border-style:solid;
+  border-width:3px;padding: 15px;5px;">
+  This is atest bargin12/25 <test id="t1"></test>
+</div>
+<div id="BorderBox">This is a test box12/25.</div>
 </html>
 <style>
   #T1 {
     border-right: 15px solid white;
     border-left: 15px solid white;
-    border-bottom: 25px solid rgb(0, 255, 98);
+    border-bottom: 25px solid rgb(140, 0, 255);
     display: inline-block;
   }
   #T2 {
@@ -111,24 +97,13 @@
     display: inline-block;
   }
 </style>
-<div id="T2">test2</div>
-<div id="T1">test1</div>
 
-<div id="T3">test3</div>
-<div id="T4">test4</div>
 <style type="text/css">
   #BorderBox{
-    border-top:5px black solid;
+    border-top:8px black solid;
     border-right:8px red double;
-    border-left:7px yellow dotted;
-    border-bottom:3px blue dashed;
+    border-left:10px yellow dotted;
+    border-bottom:8px blue dashed;
     padding: 43px;0px;
   }
 </style>
-<div id="BorderBox">四個不同的邊框設計</div>
-<div
-  style="border-color:#aaaaee;border-style:solid;border-width:3px;padding: 155px;5px;"
->
-  This is atest bargin <test id="t1"></test>
-</div>
-/** this is a note */
