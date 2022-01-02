@@ -7,7 +7,7 @@
 body {
   background-image: url(background.JPG);
   background-size: 100%;
-  background-position: initial;
+  background-position: 0 10;
   font-size: sans-serif;
 }
 
