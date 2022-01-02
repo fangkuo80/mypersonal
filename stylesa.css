@@ -1,93 +1,210 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(background.JPG);
-    background-size: cover;
-    background-position: center;    
-    font-size: sans-serif;
+  background-image: url(background.JPG);
+  background-size: cover;
+  background-position: center;
+  font-size: sans-serif;
 }
 
 .menu-bar {
-    background: rgb(0,100,0);
-    text-align: center;
+  background: rgb(0, 100, 0);
+  text-align: center;
 }
 
 .menu-bar ul {
-    display: inline-flex;
-    list-style: none;
-    color: aliceblue;
+  display: inline-flex;
+  list-style: none;
+  color: aliceblue;
 }
 
 .menu-bar ul li {
-    width: 120px;
-    margin: 15px;
-    padding: 15px;
+  width: 120px;
+  margin: 15px;
+  padding: 15px;
 }
 
 .menu-bar ul li a {
-    text-decoration: none;
-    color: bisque;
+  text-decoration: none;
+  color: bisque;
 }
 
-.active, .menu-bar ul li:hover {
-     background: #2bab0d;
-     border-radius: 3px;
-} 
+.active,
+.menu-bar ul li:hover {
+  background: #2bab0d;
+  border-radius: 3px;
+}
 
 .menu-bar .fa {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .sub-menu-1 {
-    display: none;    
+  display: none;
 }
 
 .menu-bar ul li:hover .sub-menu-1 {
-    display: block;
-    position: absolute;
-    background: rgb(0,100,0);
-    margin-top: 15px;
-    margin-left: -15px;
-} 
+  display: block;
+  position: absolute;
+  background: rgb(0, 100, 0);
+  margin-top: 15px;
+  margin-left: -15px;
+}
 
 .menu-bar ul li:hover .sub-menu-1 ul {
-    display: block;
-    margin: 10px;
+  display: block;
+  margin: 10px;
 }
 
 .menu-bar ul li:hover .sub-menu-1 ul li {
-    width: 150px;
-    padding: 10px;
-    border-bottom: 1px dotted #fff;
-    background: transparent;
-    border-radius: 0;
-    text-align: left;
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
 }
 
 .menu-bar ul li:hover .sub-menu-1 ul li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
-    color: #b2ff00;
+  color: #b2ff00;
 }
 
 .fa-angle-right {
-    float: right;
+  float: right;
 }
 
 .sub-menu-2 {
-    display: none;
+  display: none;
 }
 
 .hover-me:hover .sub-menu-2 {
-    position: absolute;
-    display: block;
-    margin-top: -40px;
-    margin-left: 140px;
-    background: rgb(0,100,0);
+  position: absolute;
+  display: block;
+  margin-top: -40px;
+  margin-left: 140px;
+  background: rgb(0, 100, 0);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px;
+}
+
+.left-side {
+  display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav-link-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+  color: black !important;
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.portfolio-items-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+  position: relative;
+}
+
+.portfolio-img-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%;
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  color: transparent;
+}
+
+.image-blur {
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.img-text-wrapper:hover .subtitle {
+  color: lightseagreen;
+  font-weight: 600;
+}
+
+.logo-wrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+}
+
+.profile-content-wrapper {
+  padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+  color: lightseagreen;
 }
