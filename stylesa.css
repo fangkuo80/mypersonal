@@ -6,8 +6,8 @@
 
 body {
   background-image: url(background.JPG);
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: initial;
   font-size: sans-serif;
 }
 
