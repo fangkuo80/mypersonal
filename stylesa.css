@@ -6,6 +6,8 @@
 
 body {
   background-image: url(background.JPG);
+  background-repeat:no-repeat; 
+  background-attachment: fixed;
   background-size: 100%;
   background-position: 0 10;
   font-size: sans-serif;
