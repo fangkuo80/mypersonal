@@ -1,228 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>方國忠的主網頁</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<html>
+<head>
+    <title>Splendid Food</title>
+    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="icon" href="../public/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/favicon.ico" type="image/ico">
+</head>
+<body>
 
-  <body>
-    <div class="container">
-      <div class="nav-wrapper">
-        <div class="left-side">
-          <div class="nav-link-wrapper active-nav-link">
-            <a href="index.html">Home</a>
-          </div>
+    <div id="app">
 
-          <div class="nav-link-wrapper">
-            <a href="about.html">About</a>
-          </div>
+    <header class="top-bar spread">
+        <nav class="top-bar-nav">
+        <a href="#" class="top-bar-link">
+            <i class="icofont-spoon-and-fork"></i>
+            <span>Home</span>
+        </a>
+        <!--a href="products.html" class="top-bar-link">
+            <span>Products</span>
+        </a>
+        <a href="past-orders.html" class="top-bar-link">
+            <span>Past Orders</span>
+        </a-->
+        </nav>
+        <a @click="toggleSidebar" class="top-bar-cart-link">
+        <i class="icofont-cart-alt icofont-1x"></i>
+        <span>Cart ({{ totalQuantity }})</span>
+        </a>
+    </header>
+
+    <!--div class="splash-container">
+        <div class="splash">
+        <h1>Splendid Food</h1>
         </div>
+    </div-->
 
-        <div class="right-side">
-          <div class="brand">JONE FANG</div>
+    <main class="wrapper">
+
+        <h2>Recommended</h2>
+
+        <!--div class="recommended"-->
+        <p class="lay1" >
+        <div v-for="(product,i) in inventory.slice(0,3)" :key="product,i" class="card">
+        <div class="card-title">
+            {{ product.name }}
         </div>
-      </div>
-
-      <div class="content-wrapper">
-        <div class="portfolio-items-wrapper">
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio1.jpg)"
-            ></div>
-
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/quip.png" alt="" />
-              </div>
-
-              <div class="subtitle">
-                方國忠的主網頁 2021/12/30.
-                OLED螢幕顯示,網路校時時鐘,可自行修改分享器ID及密碼. .
-              </div>
+        <div class="card-body">
+            <i class="icofont-10x icofont-{{ product.icon }}"></i>
+            <form>
+            <div class="row">
+                <div class="cell">
+                <label>Type:</label>
+                </div>
+                <div class="cell">
+                <em>{{ product.type }}</em>
+                </div>
             </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio2.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/devcamp.png" alt="" />
-              </div>
-
-              <div class="subtitle">
-                LCD螢幕,網路校時時鐘,可自行修改分享器ID及密碼.
-              </div>
+            <div class="row">
+                <div class="cell">
+                <label>Price:</label>
+                </div>
+                <div class="cell">
+                ${{ product.price.USD }}
+                </div>
             </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio3.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/eventbrite.png" alt="" />
-              </div>
-
-              <div class="subtitle">
-                LED顯示,網路校時時鐘,可自行修改分享器ID及密碼.
-              </div>
+            <div class="row">
+                <div class="cell">
+                <label>Quantity:</label>
+                </div>
+                <div class="cell">
+                <input type="number" v-model.number="inventory[i].quantity">
+                </div>
             </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio4.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/shop-hacker.png" alt="" />
-              </div>
-
-              <div class="subtitle">兩輪平衡車a</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio5.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/crondose.png" alt="" />
-              </div>
-
-              <div class="subtitle">兩輪平衡車b</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio6.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/dailysmarty.png" alt="" />
-              </div>
-
-              <div class="subtitle">.....</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio7.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/dashtrack.png" alt="" />
-              </div>
-
-              <div class="subtitle">.........</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio8.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/devtrunk.png" alt="" />
-              </div>
-
-              <div class="subtitle">......</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio9.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/edutechional.png" alt="" />
-              </div>
-
-              <div class="subtitle">.......</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio10.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/ministry-safe.png" alt="" />
-              </div>
-
-              <div class="subtitle">........</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio11.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/open-devos.png" alt="" />
-              </div>
-
-              <div class="subtitle">......</div>
-            </div>
-          </div>
-
-          <div class="portfolio-item-wrapper">
-            <div
-              class="portfolio-img-background"
-              style="background-image: url(images/portfolio12.jpg)"
-            ></div>
-            <div class="img-text-wrapper">
-              <div class="logo-wrapper">
-                <img src="images/logos/toastability.png" alt="" />
-              </div>
-
-              <div class="subtitle">.......</div>
-            </div>
-          </div>
+            </form>
         </div>
-      </div>
+        <div class="card-footer">
+            <button @click="addToCart(product.name,i)" class="btn btn-light">
+            Add to cart
+            </button>
+        </div>
+        </div>
+        </p>
+        
+        <p class="lay2">
+        <div v-for="(product,i) in inventory.slice(3,6)" :key="product,i" class="card">
+        <div class="card-title">
+            {{ product.name }}
+        </div>
+        <div class="card-body">
+            <i class="icofont-10x icofont-{{ product.icon }}"></i>
+            <form>
+            <div class="row">
+                <div class="cell">
+                <label>Type:</label>
+                </div>
+                <div class="cell">
+                <em>{{ product.type }}</em>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                <label>Price:</label>
+                </div>
+                <div class="cell">
+                ${{ product.price.USD }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                <label>Quantity:</label>
+                </div>
+                <div class="cell">
+                <input type="number" v-model.number="inventory[i].quantity">
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button @click="addToCart(product.name,i)" class="btn btn-light">
+            Add to cart
+            </button>
+        </div>
+        </div>
+        </p>
+        <p class="lay3">
+        <div v-for="(product,i) in inventory.slice(6,9)" :key="product,i" class="card">
+            <div class="card-title">
+            {{ product.name }}
+            </div>
+            <div class="card-body">
+            <i class="icofont-10x icofont-{{ product.icon }}"></i>
+            <form>
+                <div class="row">
+                <div class="cell">
+                    <label>Type:</label>
+                </div>
+                <div class="cell">
+                    <em>{{ product.type }}</em>
+                </div>
+                </div>
+                <div class="row">
+                <div class="cell">
+                    <label>Price:</label>
+                </div>
+                <div class="cell">
+                    ${{ product.price.USD }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="cell">
+                    <label>Quantity:</label>
+                </div>
+                <div class="cell">
+                    <input type="number" v-model.number="inventory[i].quantity">
+                </div>
+                </div>
+            </form>
+            </div>
+            <div class="card-footer">
+            <button @click="addToCart(product.name,i)" class="btn btn-light">
+                Add to cart
+            </button>
+            </div>
+        </div>
+        </p>
+        <p class="lay3">
+        <div v-for="(product,i) in inventory.slice(9,12)" :key="product,i" class="card">
+            <div class="card-title">
+            {{ product.name }}
+            </div>
+            <div class="card-body">
+            <i class="icofont-10x icofont-{{ product.icon }}"></i>
+            <form>
+                <div class="row">
+                <div class="cell">
+                    <label>Type:</label>
+                </div>
+                <div class="cell">
+                    <em>{{ product.type }}</em>
+                </div>
+                </div>
+                <div class="row">
+                <div class="cell">
+                    <label>Price:</label>
+                </div>
+                <div class="cell">
+                    ${{ product.price.USD }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="cell">
+                    <label>Quantity:</label>
+                </div>
+                <div class="cell">
+                    <input type="number" v-model.number="inventory[i].quantity">
+                </div>
+                </div>
+            </form>
+            </div>
+            <div class="card-footer">
+            <button @click="addToCart(product.name,i)" class="btn btn-light">
+                Add to cart
+            </button>
+            </div>
+        </div>
+        </p>
+        <p class="lay3">
+        <div v-for="(product,i) in inventory.slice(12,15)" :key="product,i" class="card">
+            <div class="card-title">
+            {{ product.name }}
+            </div>
+            <div class="card-body">
+            <i class="icofont-10x icofont-{{ product.icon }}"></i>
+            <form>
+                <div class="row">
+                <div class="cell">
+                    <label>Type:</label>
+                </div>
+                <div class="cell">
+                    <em>{{ product.type }}</em>
+                </div>
+                </div>
+                <div class="row">
+                <div class="cell">
+                    <label>Price:</label>
+                </div>
+                <div class="cell">
+                    ${{ product.price.USD }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="cell">
+                    <label>Quantity:</label>
+                </div>
+                <div class="cell">
+                    <input type="number" v-model.number="inventory[i].quantity">
+                </div>
+                </div>
+            </form>
+            </div>
+            <div class="card-footer">
+            <button @click="addToCart(product.name,i)" class="btn btn-light">
+                Add to cart
+            </button>
+            </div>
+        </div>
+        </p>
+
+    </main>
+    <sidebar 
+        v-if="showSidebar" 
+        :toggle="toggleSidebar"
+        :cart="cart"
+        :inventory="inventory"
+        :remove="removeItem"
+        />
+    <footer>
+    </footer>
+
     </div>
-  </body>
-
-  <script>
-    const portfolioItems = document.querySelectorAll(".portfolio-item-wrapper");
-
-    portfolioItems.forEach((portfolioItem) => {
-      portfolioItem.addEventListener("mouseover", () => {
-        console.log(portfolioItem.childNodes[1].classList);
-        portfolioItem.childNodes[1].classList.add("image-blur");
-      });
-
-      portfolioItem.addEventListener("mouseout", () => {
-        console.log(portfolioItem.childNodes[1].classList);
-        portfolioItem.childNodes[1].classList.remove("image-blur");
-      });
-    });
-  </script>
-</html>
+</body>
+</html>      
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+<style>
+    .lay1{ width:200px; height:20px; border:1px solid #1003cc;}   
+    .lay2{ width:200px; height:20px; border:1px solid #FF6699;}   
+    .lay3{ width:200px; height:20px; border:1px solid #66ffd9;}  
+</style>
